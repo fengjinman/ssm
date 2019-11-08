@@ -1,0 +1,2 @@
+tomcat日志文件中文乱码：
+解决方式：windows下控制台输出是gbk logging.properties中设置成utf-8的地方修改为gbk
