@@ -1,12 +1,10 @@
-import com.jinman.dao.UserDao;
-import com.jinman.entity.User;
+import com.jinman.mapper.UserMapper;
+import com.jinman.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.annotation.Resource;
 
 /**
  * Created by fengjinman Administrator on 2018/6/15.
@@ -15,14 +13,14 @@ import javax.annotation.Resource;
 @ContextConfiguration({"classpath:spring-mybatis.xml"})
 public class UserDaoTest {
 
-    @Resource
-    private UserDao userDao;
+    @Autowired
+    private UserMapper userMapper;
 
     @Test
     public void testUserDao(){
         int id = 1;
-        System.out.println(userDao);
-        User user = userDao.findUserById(id);
+        System.out.println(userMapper);
+        User user = userMapper.findUserById(id);
         System.out.println("user = "+user);
     }
 }

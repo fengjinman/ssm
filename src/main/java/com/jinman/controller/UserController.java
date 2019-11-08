@@ -1,6 +1,6 @@
 package com.jinman.controller;
 
-import com.jinman.entity.User;
+import com.jinman.model.User;
 import com.jinman.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,4 +25,5 @@ public class UserController {
         model.addAttribute("user",user);
         return "index";
     }
+
 }
