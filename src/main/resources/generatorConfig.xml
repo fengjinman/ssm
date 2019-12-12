@@ -2,8 +2,8 @@
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
 <generatorConfiguration>
+    <properties resource="generator.properties"></properties>
     <classPathEntry
             location="D:\java\jar_home\mysql\mysql-connector-java\8.0.16\mysql-connector-java-8.0.16.jar"/>
     <context id="my" targetRuntime="MyBatis3">
@@ -36,7 +36,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="test" domainObjectName="Test">
+        <table tableName="${tableName}" domainObjectName="${beanName}">
         </table>
 
     </context>

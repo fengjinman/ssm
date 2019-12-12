@@ -1,5 +1,4 @@
 import com.jinman.mapper.UserMapper;
-import com.jinman.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +17,6 @@ public class UserDaoTest {
 
     @Test
     public void testUserDao(){
-        int id = 1;
-        System.out.println(userMapper);
-        User user = userMapper.findUserById(id);
-        System.out.println("user = "+user);
+
     }
 }

@@ -1,6 +1,5 @@
 package com.jinman.controller;
 
-import com.jinman.model.User;
 import com.jinman.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,10 +18,8 @@ public class UserController {
 
     @RequestMapping("/findUser")
     public String test(Model model){
-        int id = 1;
-        User user = userService.findUserById(id);
-        System.out.println("user = "+user);
-        model.addAttribute("user",user);
+        System.out.println(userService.queryAll().get(0).toString());
+        model.addAttribute("user",userService.queryAll().get(0));
         return "index";
     }
 
